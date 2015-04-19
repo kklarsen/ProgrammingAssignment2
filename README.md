@@ -15,7 +15,7 @@ More details are given in the comments to the code found in `"cachematrix.R"`.
 
 I have furthermore added some code in the the global environment that provides a simple matrix and line by line illustrates the functionality of the two functions `makeCacheMatrix` and `cacheSolve`(i.e., doing the actual matrix inversion).
 
-Though to get the fun going you can define your own matrix __a__, feed it to `makeCacheMatix`by `v <- makeCacheMatrix(a)`. Note you would need to call the `cacheSolve`function to initiate the matrix inversion, e.g., `ai <- cacheSolve(v)`and then just to prove it works do `a1 %*% a` which should give you __I__, the unity matrix with 1's in the diagonal and zero everywhere else.
+Though to get the fun going you can define your own matrix __a__, feed it to `makeCacheMatix`by `v <- makeCacheMatrix(a)`. Note you would need to call the `cacheSolve`function to initiate the matrix inversion, e.g., `ai <- cacheSolve(v)`and then just to prove it works do `a1 %*% a` which should give you __I__, the unity matrix with 1's in the diagonal and zero everywhere else. Second time you call the `cacheSolve` (for the same matrix) you should see `"getting cached data"` which means that the result was retrived from the cache and no calculation where made.
 
 Have fun!
 
